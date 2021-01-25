@@ -16,8 +16,7 @@ def file_processing(file):
     return opened_file #returns the list of list
 
 # function to accept input values and solve the problem
-def solve(input_data):
-    
+def solve(input_data):    
 
     pass
 
