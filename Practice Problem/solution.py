@@ -2,11 +2,7 @@
 
 # function to process input file and extract values
 def file_processing(file):
-    f = open(file).readlines()
-    print("There are {} pizzas".format(f[0][0]))
-    # for i in f[1:]:
-    #     print(i[0])
-    return f
+    
 
 
 # function to accept input values and solve the problem
@@ -22,16 +18,14 @@ def write_file():
 
 # contains the functions to run
 def main():
-    # input_data = file_processing()
-    # answer = solve(input_data)
-    # write_file('', 'w')
-    f = file_processing("a_example") # f is a list which contains each line of the file as an element
-    answer = solve(f)
+    for each_file in ["a_example", "b_little_bit_of_everything.in", "c_many_ingredients.in", "d_many_pizzas.in","e_many_teams.in"  ]:
+        f = file_processing(each_file) # processes each file
+        answer = solve(f) #solves each file
+        write_file(each_file, 'w') #writes each file with their dataset name
+        pass
     
-    
-
 if __name__ == '__main__':
     main()
-
+    
 
 # Done!
