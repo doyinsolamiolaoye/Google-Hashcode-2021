@@ -27,7 +27,7 @@ def main():
 
         answer = solve(f) #solves each file
 
-        # writes each answer to a new file and save it with their dataset name in a text format
+        # writes each answer to a new file and save it with their dataset name in a out format
         f = open("../solution/" + each_file + ".out", "w") 
         f.write(str(answer))
         f.close()
