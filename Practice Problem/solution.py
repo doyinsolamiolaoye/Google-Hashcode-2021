@@ -8,10 +8,7 @@ def file_processing(file):
         
     first_line = opened_file[0] #assigns first line in the list of list to first_line variable
     
-    print("There are {} pizzas for {}".format(first_line[0], file))
-    print("{} team of two".format(first_line[1]))
-    print("{} team of three".format(first_line[2]))
-    print("{} team of four\n".format(first_line[3]))
+    print("There are {} pizzas for {} such that we have {} team of two, {} team of three, {} team of four \n".format(first_line[0], file, first_line[1], first_line[2], first_line[3]))
     
     return opened_file #returns the list of list
 
