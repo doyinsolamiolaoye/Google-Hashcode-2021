@@ -19,7 +19,7 @@ def file_processing(file):
 # function to accept input values and solve the problem
 def solve(input_data):    
 
-    return answer # answer is a list of list where each list have its value to the number of people in the team and subsequent values as indexes of the pizza in the original file that will be given to that team
+    return answer # answer is a list of list where each list have its first value to be the number of people in the team and subsequent values as indexes of the pizza in the original file that will be given to that team
 
 # contains the functions to run
 def main():
@@ -29,7 +29,7 @@ def main():
         answer = solve(f) #solves each file and returns the each delivery to a new line
         
         output_file = open("../solution/" + each_file + ".out", "w") # writes each answer to a new file and save it with their dataset name in a out format
-        output_file.write(str(len(answer)) + "\n") # frist line in file 
+        output_file.write(str(len(answer)) + "\n") # frist line in file is the total number of teams delivered to i.e the number of length of our list of list, answer
         output_file.write(answer)
         output_file.close()
 
