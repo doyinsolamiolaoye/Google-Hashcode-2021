@@ -19,19 +19,19 @@ def file_processing(file):
 # function to accept input values and solve the problem
 def solve(input_data):    
 
-    pass
+    return answer # answer is a list of list where each list have its value to the number of people in the team and subsequent values as indexes of the pizza in the original file that will be given to that team
 
 # contains the functions to run
 def main():
     for each_file in ["a_example", "b_little_bit_of_everything", "c_many_ingredients", "d_many_pizzas","e_many_teams"]:
         f = file_processing(each_file) # processes each file
 
-        answer = solve(f) #solves each file
-
-        # writes each answer to a new file and save it with their dataset name in a out format
-        f = open("../solution/" + each_file + ".out", "w") 
-        f.write(str(answer))
-        f.close()
+        answer = solve(f) #solves each file and returns the each delivery to a new line
+        
+        output_file = open("../solution/" + each_file + ".out", "w") # writes each answer to a new file and save it with their dataset name in a out format
+        output_file.write(str(len(answer)) + "\n") # frist line in file 
+        output_file.write(answer)
+        output_file.close()
 
 if __name__ == '__main__':
     main()
