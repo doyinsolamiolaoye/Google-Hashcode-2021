@@ -1,4 +1,3 @@
-
 # Google Hashcode 2021 Practice Problem
 
 # function to process input file and extract values
