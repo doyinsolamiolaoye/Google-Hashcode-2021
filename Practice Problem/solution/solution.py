@@ -5,12 +5,11 @@ def file_processing(file):
     # this method is more efficient when working with big data
     with open(file + ".in") as f:
         opened_file = [line.strip().split() for line in f] #a list of list such that each line is a list
-        
-    first_line = opened_file[0] #assigns first line in the list of list to first_line variable
+
+    first_line = opened_file[0]
+    opened_file = opened_file[1:]
     
-    p , f, t, w = list(map(int, first_line)) #converts all values in the firstline to integers
-    
-    return opened_file #returns the list of list
+    return first_line, opened_file #returns the first line and then the list of list without the first_line
 
 # function to accept input values and solve the problem
 def solve(input_data):    
