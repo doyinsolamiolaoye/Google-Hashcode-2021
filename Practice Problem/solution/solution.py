@@ -9,10 +9,6 @@ def file_processing(file):
     first_line = opened_file[0] #assigns first line in the list of list to first_line variable
     
     p , f, t, w = list(map(int, first_line)) #converts all values in the firstline to integers
-
-    print("There are {} pizzas for {} such that we have {} team of two, {} team of three, {} team of four".format(p, file, f, t, w))
-
-    # print("We are going to give {} team of 4, {} team of 3, {} team of 2".format(a, b, c))
     
     return opened_file #returns the list of list
 
